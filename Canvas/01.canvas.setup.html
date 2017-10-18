@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <body>
-
-        <canvas id="myCanvas" width="400" height="200" />
-        
-    </body>
+        <script>
+            window.onload = function(){
+            // Step 2: Find the canvas
+                var canvas = document.getElementById('myCanvas');
+            // Step 3: Access the 2d context
+                var ctx = canvas.getContext('2d');
+            // Step 4: Render graphics
+                //Render rectangle (x, y, width, height)
+                ctx.fillStyle = 'green';
+                ctx.fillRect(20,20,200,150);
+                //Render ellipse (x, y, radius, startAngle, endAngle, anti/clockwise)
+                ctx.fillStyle = 'red';
+                ctx.arc(500,500,50,0,2*Math.PI, false);
+                ctx.fill();
+                };
+        </script>    
   </head>
+<body>
+
+        <!-- Step 1: Define the canvas element. Set width/height -->
+        <canvas id="myCanvas" width="1000" height="1000" style="background-color:#ededed">
+            <h1>This is a fallback message for browsers that don't support canvas.</h1>
+        </canvas>
+        
+
+    </body>
+
 </html>
 
 
