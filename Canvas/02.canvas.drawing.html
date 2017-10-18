@@ -1,0 +1,51 @@
+<!DOCTYPE> 
+<html>
+<head>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+
+            var scores = [100, 90, 94, 83, 79];
+            var width = 50;
+            var currX = 50;
+            var base = 200;
+
+            ctx.fillStyle = 'green';
+            for (var i=0; i<scores.length; i++){
+                var h = scores[i];
+                ctx.fillRect(currX, h, width, h);
+                currX += width + 10;
+            }
+
+            
+        }
+    </script>
+</head>
+<body>
+
+    <canvas id="myCanvas" height="1000" width="1000" style="background-color:#ededed"></canvas>
+
+<div class="container">
+
+    <h2>Rectangles</h2>
+
+    clearRect(x,y,w,h)
+    fillRect(x,y,w,h)
+    rect(x,y,w,h)
+    strokeRect(x,y,w,h)
+
+    <h2>Arc/Ellipse</h2>
+
+    arc(x,y,radius,startAngle, endAngle, anti/clockwise)
+    arcTo(x1,y1,x2,y2, radius)
+
+    <h3>Styles</h3>
+    fillStyle
+    strokeStyle
+
+</div>
+
+
+</body>
+</html>
