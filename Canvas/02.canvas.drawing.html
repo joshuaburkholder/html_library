@@ -1,49 +1,68 @@
 <!DOCTYPE> 
 <html>
 <head>
+    <link rel="stylesheet" href="./style.css">
     <script>
         window.onload = function(){
             var canvas = document.getElementById('myCanvas');
             var ctx = canvas.getContext('2d');
 
-            var scores = [100, 90, 94, 83, 79];
+            var scores = [100, 80, 65, 94, 54, 83, 79];
+            scores.reverse();
             var width = 50;
             var currX = 50;
             var base = 200;
 
-            ctx.fillStyle = 'green';
+            // ctx.fillStyle = 'green';
+            // for (var i=0; i<scores.length; i++){
+            //     var h = scores[i];
+            //     if(scores[i]<70){
+            //         ctx.fillStyle = 'red';
+            //     } else if(scores[i]>70 && scores[i]<90){
+            //         ctx.fillStyle = 'orange';
+            //     } else {
+            //         ctx.fillStyle = 'green';
+            //     }
+            //     ctx.fillRect(currX, canvas.height - h, width, h);
+            //     currX += width + 10;
+            // }
+            ctx.translate(500, 200);
+            ctx.rotate(Math.PI);
+
+            ctx.fillStyle = 'blue';
             for (var i=0; i<scores.length; i++){
-                var h = scores[i];
-                ctx.fillRect(currX, h, width, h);
-                currX += width + 10;
+                ctx.fillRect(currX, 0, width, scores[i]);
+                currX += width + 10
             }
 
-            
         }
     </script>
 </head>
 <body>
 
-    <canvas id="myCanvas" height="1000" width="1000" style="background-color:#ededed"></canvas>
+    <canvas id="myCanvas" height="300" width="500" style="background-color:#ededed"></canvas>
 
 <div class="container">
-
+    <div class="box rect">
     <h2>Rectangles</h2>
 
     clearRect(x,y,w,h)
     fillRect(x,y,w,h)
     rect(x,y,w,h)
     strokeRect(x,y,w,h)
-
+    </div>
+    
+    <div class="box arc">
     <h2>Arc/Ellipse</h2>
 
     arc(x,y,radius,startAngle, endAngle, anti/clockwise)
     arcTo(x1,y1,x2,y2, radius)
-
+    </div>
+    <div class="box style">
     <h3>Styles</h3>
     fillStyle
     strokeStyle
-
+    </div>
 </div>
 
 

@@ -1,0 +1,27 @@
+body {
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+canvas {
+    margin-bottom: 20px;
+
+}
+.container{
+    background-color: white;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box{
+    width: 45%;
+    margin-right: 4px;
+    background-color: rgba(135, 206, 250, .8);
+    padding: 5px;
+}
+
+.style{
+    width: 500px;
+    margin-top: 5px;
+}
